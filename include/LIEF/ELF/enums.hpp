@@ -248,7 +248,7 @@ enum class ARCH: size_t  {
   EM_AMDGPU        = 224, /**< AMD GPU architecture */
   EM_RISCV         = 243, /**< RISC-V */
   EM_BPF           = 247,  /**< eBPF Filter */
-  EM_LOONGARCH     = 258  /**< Loongson LoongArch */
+  EM_LOONGARCH     = 258  /**< LoongArch */
 };
 
 
@@ -347,7 +347,7 @@ enum class RELOC_SPARC: size_t  {
   #include "LIEF/ELF/Relocations/Sparc.def"
 };
 
-/* ELF Relocation type for LoongArch. */
+/* ELF Relocation types for LoongArch. */
 enum class RELOC_LOONGARCH: size_t  {
   #include "LIEF/ELF/Relocations/LoongArch.def"
 };
@@ -457,12 +457,9 @@ enum class HEXAGON_EFLAGS: size_t  {
 
 /* LoongArch Specific e_flags */
 enum class LOONGARCH_EFLAGS: size_t  {
-  EF_LARCH_BASE_ABI_ILP32S = 0x5,
-  EF_LARCH_BASE_ABI_ILP32F = 0x6,
-  EF_LARCH_BASE_ABI_ILP32D = 0x7,
-  EF_LARCH_BASE_ABI_LP64S  = 0x1,
-  EF_LARCH_BASE_ABI_LP64F  = 0x2,
-  EF_LARCH_BASE_ABI_LP64D  = 0x3
+  EF_LOONGARCH_ABI_SOFT_FLOAT    = 0x1,
+  EF_LOONGARCH_ABI_SINGLE_FLOAT  = 0x2,
+  EF_LOONGARCH_ABI_DOUBLE_FLOAT  = 0x3
 };
 
 

@@ -223,7 +223,7 @@ enum _LIEF_EN(ARCH) {
   _LIEF_EI(EM_AMDGPU)        = 224, /**< AMD GPU architecture */
   _LIEF_EI(EM_RISCV)         = 243, /**< RISC-V */
   _LIEF_EI(EM_BPF)           = 247, /**< eBPF Filter */
-  _LIEF_EI(EM_LOONGARCH)     = 258  /**< Loongson LoongArch */
+  _LIEF_EI(EM_LOONGARCH)     = 258  /**< LoongArch */
 };
 
 
@@ -322,7 +322,7 @@ enum _LIEF_EN(RELOC_SPARC) {
   #include "LIEF/ELF/Relocations/Sparc.def"
 };
 
-/* ELF Relocation type for LoongArch. */
+/* ELF Relocation types for LoongArch. */
 enum _LIEF_EN(RELOC_LOONGARCH) {
   #include "LIEF/ELF/Relocations/LoongArch.def"
 };
@@ -433,12 +433,9 @@ enum _LIEF_EN(HEXAGON_EFLAGS) {
 
 /* LoongArch Specific e_flags */
 enum _LIEF_EN(LOONGARCH_EFLAGS) {
-  _LIEF_EI(EF_LARCH_BASE_ABI_ILP32S)      = 0x5,
-  _LIEF_EI(EF_LARCH_BASE_ABI_ILP32F)      = 0x6,
-  _LIEF_EI(EF_LARCH_BASE_ABI_ILP32D)      = 0x7,
-  _LIEF_EI(EF_LARCH_BASE_ABI_LP64S)       = 0x1,
-  _LIEF_EI(EF_LARCH_BASE_ABI_LP64F)       = 0x2,
-  _LIEF_EI(EF_LARCH_BASE_ABI_LP64D)       = 0x3
+  _LIEF_EI(EF_LOONGARCH_ABI_SOFT_FLOAT)        = 0x1,
+  _LIEF_EI(EF_LOONGARCH_ABI_SINGLE_FLOAT)      = 0x2,
+  _LIEF_EI(EF_LOONGARCH_ABI_DOUBLE_FLOAT)      = 0x3
 };
 
 /** Special section indices. */
